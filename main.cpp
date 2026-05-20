@@ -1,3 +1,4 @@
+// Milestone 1
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -8,7 +9,7 @@ using namespace std;
 int main()
 {
     map<string, int> airportTraffic;
-    ifstream inputFile("210-final-1-SP26");
+    ifstream inputFile("210-final-1-SP26.txt");
 
     if (!inputFile)
     {
@@ -30,8 +31,19 @@ int main()
             airportTraffic[destination] = 0;
         }
 
+        airportTraffic[origin]++;
+        airportTraffic[destination]++;
+
     }
 
+    cout << "All airport traffic count:" << endl;
+
+    for (const auto& airport : airportTraffic)
+    {
+        cout << airport.first <<" "<< airport.second << endl;
+    }
+
+    inputFile.close();
 
     return 0;
 }
