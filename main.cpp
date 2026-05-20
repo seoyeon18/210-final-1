@@ -1,10 +1,17 @@
-// Milestone 2
+// Milestone 3
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <map>
 
 using namespace std;
+
+void printAirportsInRange(const map<string, int>& airportTraffic, int low, int high)
+{
+    cout << "Airports with traffic in range [" << low << ", " << high << "]:" << endl;
+
+    
+}
 
 int main()
 {
@@ -62,6 +69,12 @@ int main()
             cout << airport.first <<airport.second << endl;
         }  
     }
+
+    cout << endl;
+    printAirportsInRange(airportTraffic);
+
+    cout << endl;
+    printAirportsInRange(airportTraffic);
 
     inputFile.close();
 
