@@ -1,4 +1,4 @@
-// Milestone 3
+// Milestone 4
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -49,7 +49,7 @@ int main()
 
     }
 
-    cout << "All airport traffic count:" << endl;
+    cout << "All airport traffic count: " << endl;
 
     for (const auto& airport : airportTraffic)
     {
@@ -67,20 +67,20 @@ int main()
     }
 
     cout << endl;
-    cout << "Busiest airport w count " << maxTraffic << ":" << endl;
+    cout << "Busiest airports with count " << maxTraffic << ":" << endl;
 
     for (const auto& airport : airportTraffic)
     {
         if (airport.second == maxTraffic){
-            cout << airport.first <<airport.second << endl;
+            cout << airport.first << " " << airport.second << endl;
         }  
     }
 
     cout << endl;
-    printAirportsInRange(airportTraffic, 1, 5);
+    printAirportsInRange(airportTraffic, 5,8);
 
     cout << endl;
-    printAirportsInRange(airportTraffic,20,40);
+    printAirportsInRange(airportTraffic,9,12);
 
     inputFile.close();
 
